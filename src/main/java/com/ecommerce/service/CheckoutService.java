@@ -73,8 +73,8 @@ public class CheckoutService {
             .quantity(request.getQuantity())
             .totalAmount(request.getTotalAmount())
             .status("PENDING")
-            .customerEmail("customer@example.com")
-            .customerPhone("+1234567890")
+            .customerEmail(request.getCustomerEmail() != null ? request.getCustomerEmail() : "customer@example.com")
+            .customerPhone(request.getCustomerPhone() != null ? request.getCustomerPhone() : "+1234567890")
             .createdAt(LocalDateTime.now())
             .build();
     }

@@ -18,4 +18,6 @@ public class CheckoutRequest {
     private int quantity;
     private BigDecimal totalAmount;
     private String paymentMethod;
+    private String customerEmail;
+    private String customerPhone;
 }

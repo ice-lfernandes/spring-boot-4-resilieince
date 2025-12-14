@@ -28,12 +28,16 @@ public class InventoryService {
         log.info("Checking stock: product={}, quantity={}", productId, quantity);
         
         // Simulate inventory check - in real scenario would call external service
+        // Using a simple logic: products with ID 1-10 have stock, others may not
+        boolean hasStock = productId <= 10;
+        int availableQuantity = hasStock ? (int)(Math.random() * 100 + 50) : 0;
+        
         return Mono.just(StockResponse.builder()
             .productId(productId)
-            .available(true)
-            .quantity(100)
+            .available(hasStock && availableQuantity >= quantity)
+            .quantity(availableQuantity)
             .estimated(false)
-            .message("Stock available")
+            .message(hasStock ? "Stock available" : "Product out of stock")
             .build())
             .doOnSuccess(response -> log.info("Stock verified: {}", response))
             .doOnError(error -> log.error("Error checking stock", error));

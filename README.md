@@ -1,6 +1,6 @@
-# Spring Boot 4 Resilience API
+# Spring Boot Resilience API
 
-A comprehensive demonstration of resilience patterns in Spring Boot using Resilience4j, implementing Circuit Breaker, Rate Limiter, Retry, Bulkhead, and Time Limiter patterns for a robust e-commerce API.
+A comprehensive demonstration of resilience patterns in Spring Boot 3 using Resilience4j, implementing Circuit Breaker, Rate Limiter, Retry, Bulkhead, and Time Limiter patterns for a robust e-commerce API.
 
 ## Overview
 
@@ -272,7 +272,7 @@ The application uses H2 in-memory database. Access the console at:
 
 ## Contributing
 
-This is a demonstration project based on the article "Spring Boot 4 and Resilience: How I Made My APIs More Robust with the New Features".
+This is a demonstration project based on the article "Spring Boot and Resilience: How I Made My APIs More Robust with the New Features".
 
 ## License
 
